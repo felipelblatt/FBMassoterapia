@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FB Massoterapia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #008080, #004d4d);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      min-height: 100vh;
+      transition: background 1s;
+    }
+
+    .page-inicial {
+      background: url('https://images.unsplash.com/photo-1588776814546-ec7e008fa02e') center/cover no-repeat;
+      color: white;
+      text-shadow: 1px 1px 4px black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .page-inicial::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    .page-inicial .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .beneficios {
+      background: #f2f2f2;
+      animation: fadein 1s;
+    }
+
+    .como-funciona {
+      background: #e0f7fa;
+      animation: slidein 1s;
+    }
+
+    .contato {
+      background: #ffffff;
+      animation: fadein 1.5s;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 1rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p, ul {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .imagem-exemplo {
+      width: 100%;
+      height: 300px;
+      background-color: #ccc;
+      margin-top: 1rem;
+      border-radius: 10px;
+    }
+
+    form input, form textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background: #008080;
+      color: white;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background: #005757;
+    }
+
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      z-index: 1001;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #128C7E;
+    }
+
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 2rem;
+      }
+      p, ul {
+        font-size: 1rem;
+      }
+      nav a {
+        display: inline-block;
+        margin: 5px 10px;
+      }
+    }
+
+    @keyframes fadein {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slidein {
+      from { transform: translateX(-100px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>FB Massoterapia</h1>
+    <nav>
+      <a href="#inicio">Página Inicial</a>
+      <a href="#beneficios">Benefícios</a>
+      <a href="#como-funciona">Como Funciona</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section id="inicio" class="page-inicial">
+    <div class="container">
+      <h2>Transforme seu ambiente de trabalho</h2>
+<p>Reduza o estresse, aumente a produtividade e cuide de quem faz sua empresa acontecer</p>
+<p>Agende uma experiência transformadora para sua equipe!</p>
+    </div>
+  </section>
+
+  <section id="beneficios" class="beneficios">
+    <div class="container">
+      <h2>Benefícios</h2>
+      <p><B>🧍‍♂️ Benefícios Físicos:</B>
+<p>Alívio de dores musculares e articulares </p>
+<p>Melhora da circulação sanguínea e linfática </p>
+<p>Redução de tensões e contraturas</p>
+<p>Aumento da flexibilidade e mobilidade</p>
+
+<p><B>🧠 Benefícios Mentais:</B></p>
+<p>Redução do estresse e da ansiedade</p>
+<p>Melhora da qualidade do sono</p>
+<p>Sensação de acolhimento e cuidado</p>
+<p>Ativação do sistema parassimpático promovendo bem-estar</p>
+<p>Aumento da concentração e clareza mental</p>
+
+<p><B>💼 Benefícios para empresa:</B></p>
+<p>Redução do absenteísmo por questões de saúde</p>
+<p>Melhora do clima organizacional e consequentemente do foco e produtividade</p>
+<p>Valorização do colaborador, promovendo motivação e satisfação</p>
+<p>Fortalecimento da imagem da empresa como promotora de bem-estar e qualidade de vida.</p>
+  </section>
+
+  <section id="como-funciona" class="como-funciona">
+    <div class="container">
+      <h2>Como Funciona</h2>
+      <p>Massagem realizada na maca, com equipamento próprio</p>
+      <p>Sessões de 15 minutos por colaborador, sem precisar trocar de roupa</p>
+      <p>Atendimento no local, com agendamento flexível</p>
+      <p>Avaliação musculoesquelética e terapia individualizada para quem apresenta dores ou desconfortos</p>
+      <p>Técnicas utilizadas: Massagem terapêutica, liberação miofascial e mobilizações/manipulações articulares</p>
+      <p>Atendimento seguro com abordagens baseadas em evidências científicas.</p>
+  </section>
+
+  <section id="contato" class="contato">
+    <div class="container">
+      <h2>Contato</h2>
+      <p>Agende uma demonstração gratuita</p>
+      <p>Conheça os benefícios da massoterapia no ambiente corporativo.</p>
+      <form action="mailto:felipe.quiropraxista@gmail.com" method="POST" enctype="text/plain">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="mensagem" placeholder="Escreva sua mensagem..." rows="6"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <a href="https://wa.me/5551999465688" class="whatsapp-btn" target="_blank" aria-label="Abrir conversa no WhatsApp">Fale comigo no WhatsApp</a>
+<footer style="background:#004d4d; color:white; text-align:center; padding:0.5rem 0; font-size:0.9rem;">
+  © 2025 Felipe Blatt - Massoterapia Corporativa
+</footer>
+
+</body>
+
+</html>
