@@ -50,6 +50,7 @@
     section {
       padding: 2rem 1rem;
       min-height: 100vh;
+      scroll-margin-top: 100px; /* Compensa cabeçalho sticky */
     }
 
     .page-inicial, .beneficios, .como-funciona {
@@ -184,6 +185,8 @@
       .imagem-direita, .foto-contato {
         margin-top: 2rem;
         flex: 1 1 100%;
+        max-width: 100%; /* Corrigido: imagens maiores no celular */
+        height: auto;
       }
 
       .container {
