@@ -2,12 +2,11 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Massoterapia corporativa com foco em bem-estar, saúde e produtividade no ambiente de trabalho. Atendimentos personalizados na sua empresa.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FB Massoterapia</title>
-  <link rel="icon" type="image/png" href="icone.png">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="icone.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -49,58 +48,60 @@
     }
 
     section {
-      padding: 4rem 2rem;
+      padding: 2rem 1rem;
       min-height: 100vh;
-      transition: background 1s;
     }
 
-    .page-inicial {
-      background: url('https://images.unsplash.com/photo-1588776814546-ec7e008fa02e') center/cover no-repeat;
-      color: white;
-      text-shadow: 1px 1px 4px black;
+    .page-inicial, .beneficios, .como-funciona {
+      background: none;
+      color: #333;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-      text-align: center;
-      position: relative;
+      justify-content: space-between;
+      flex-wrap: nowrap;
     }
 
-    .page-inicial::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.4);
-      z-index: 0;
+    .texto-esquerda {
+      flex: 1 1 50%;
+      padding-right: 1rem;
     }
 
-    .page-inicial .container {
-      position: relative;
-      z-index: 1;
+    .imagem-direita {
+      flex: 1 1 50%;
+      max-width: 40%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transform: translateX(50px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .imagem-direita.visible {
+      opacity: 1;
+      transform: translateX(0);
     }
 
     .beneficios {
       background: #f2f2f2;
-      animation: fadein 1s;
     }
 
     .como-funciona {
       background: #e0f7fa;
-      animation: slidein 1s;
     }
 
     .contato {
       background: #ffffff;
-      animation: fadein 1.5s;
     }
 
     .container {
-      max-width: 960px;
+      max-width: 1400px;
       margin: auto;
-      padding: 1rem;
+      padding: 0 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     h2 {
@@ -108,63 +109,52 @@
       margin-bottom: 1.5rem;
     }
 
-    p,
-    ul {
+    p, ul {
       font-size: 1.2rem;
       margin-bottom: 1rem;
     }
 
-    .imagem-exemplo {
-      width: 100%;
-      height: 300px;
-      background-color: #ccc;
-      margin-top: 1rem;
-      border-radius: 10px;
-    }
-
-    form input,
-    form textarea {
-      display: block;
-      width: 100%;
-      margin-bottom: 1rem;
-      padding: 0.8rem;
-      font-size: 1rem;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    form button {
-      background: #008080;
-      color: white;
-      padding: 0.8rem 2rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    form button:hover {
-      background: #005757;
-    }
-
     .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
+      background-color: #25d366;
       color: white;
       padding: 1rem 1.5rem;
       border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
       transition: background 0.3s;
-      z-index: 1001;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: inline-block;
     }
 
     .whatsapp-btn:hover {
-      background-color: #128C7E;
+      background-color: #128c7e;
+    }
+
+    .contato-flex {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .contato-texto {
+      flex: 1 1 50%;
+    }
+
+    .foto-contato {
+      max-width: 30%;
+      height: auto;
+      flex: 1 1 40%;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transform: translateX(50px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .foto-contato.visible {
+      opacity: 1;
+      transform: translateX(0);
     }
 
     @media (max-width: 768px) {
@@ -172,8 +162,7 @@
         font-size: 2rem;
       }
 
-      p,
-      ul {
+      p, ul {
         font-size: 1rem;
       }
 
@@ -181,27 +170,24 @@
         display: inline-block;
         margin: 5px 10px;
       }
-    }
 
-    @keyframes fadein {
-      from {
-        opacity: 0;
+      .page-inicial, .beneficios, .como-funciona, .contato-flex {
+        flex-direction: column;
+        text-align: center;
       }
 
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes slidein {
-      from {
-        transform: translateX(-100px);
-        opacity: 0;
+      .texto-esquerda, .contato-texto {
+        padding: 0;
+        flex: 1 1 100%;
       }
 
-      to {
-        transform: translateX(0);
-        opacity: 1;
+      .imagem-direita, .foto-contato {
+        margin-top: 2rem;
+        flex: 1 1 100%;
+      }
+
+      .container {
+        padding: 0 1rem;
       }
     }
   </style>
@@ -220,76 +206,87 @@
 
   <section id="inicio" class="page-inicial">
     <div class="container">
-      <h2>Transforme seu ambiente de trabalho</h2>
-      <p>Reduza o estresse, aumente a produtividade e cuide de quem faz sua empresa acontecer</p>
-      <p>Agende uma experiência transformadora para sua equipe!</p>
+      <div class="texto-esquerda">
+        <h2>Transforme seu ambiente de trabalho</h2>
+        <p>Reduza o estresse, aumente a produtividade e cuide de quem faz sua empresa acontecer</p>
+        <p>Agende uma experiência transformadora para sua equipe!</p>
+      </div>
+      <img src="img2.jpg" alt="Massagem terapêutica" class="imagem-direita">
     </div>
   </section>
 
   <section id="beneficios" class="beneficios">
     <div class="container">
-      <h2>Benefícios</h2>
-      <p><strong>🧍‍♂️ Benefícios Físicos:</strong></p>
-      <p>Alívio de dores musculares e articulares</p>
-      <p>Melhora da circulação sanguínea e linfática</p>
-      <p>Redução de tensões e contraturas</p>
-      <p>Aumento da flexibilidade e mobilidade</p>
-
-      <p><strong>🧠 Benefícios Mentais:</strong></p>
-      <p>Redução do estresse e da ansiedade</p>
-      <p>Melhora da qualidade do sono</p>
-      <p>Sensação de acolhimento e cuidado</p>
-      <p>Ativação do sistema parassimpático promovendo bem-estar</p>
-      <p>Aumento da concentração e clareza mental</p>
-
-      <p><strong>💼 Benefícios para empresa:</strong></p>
-      <p>Redução do absenteísmo por questões de saúde</p>
-      <p>Melhora do clima organizacional e consequentemente do foco e produtividade</p>
-      <p>Valorização do colaborador, promovendo motivação e satisfação</p>
-      <p>Fortalecimento da imagem da empresa como promotora de qualidade de vida.</p>
+      <div class="texto-esquerda">
+        <h2>Benefícios</h2>
+        <p><b>🧍‍♂️ Benefícios Físicos:</b></p>
+        <p>Alívio de dores musculares e articulares </p>
+        <p>Melhora da circulação sanguínea e linfática </p>
+        <p>Redução de tensões e contraturas</p>
+        <p>Aumento da flexibilidade e mobilidade</p>
+        <p><b>🧠 Benefícios Mentais:</b></p>
+        <p>Redução do estresse e da ansiedade</p>
+        <p>Melhora da qualidade do sono</p>
+        <p>Sensação de acolhimento e cuidado</p>
+        <p>Ativação do sistema parassimpático promovendo bem-estar</p>
+        <p>Aumento da concentração e clareza mental</p>
+        <p><b>💼 Benefícios para empresa:</b></p>
+        <p>Redução do absenteísmo por questões de saúde</p>
+        <p>Melhora do clima organizacional e consequentemente do foco e produtividade</p>
+        <p>Valorização do colaborador, promovendo motivação e satisfação</p>
+        <p>Fortalecimento da imagem da empresa como promotora de qualidade de vida.</p>
+      </div>
+      <img src="img4.jpg" alt="Uso de massageador" class="imagem-direita">
     </div>
   </section>
 
   <section id="como-funciona" class="como-funciona">
     <div class="container">
-      <h2>Como Funciona</h2>
-      <p>Massagem realizada na maca, com equipamento próprio</p>
-      <p>Sessões de 15 minutos por colaborador, sem precisar trocar de roupa</p>
-      <p>Atendimento no local, com agendamento flexível</p>
-      <p>Avaliação e terapia individualizada para quem apresenta dores musculares</p>
-      <p>Técnicas utilizadas: Massagem terapêutica, liberação miofascial e mobilizações/manipulações articulares</p>
-      <p>Atendimento seguro com abordagens baseadas em evidências científicas.</p>
+      <div class="texto-esquerda">
+        <h2>Como Funciona</h2>
+        <p>Massagem realizada na maca, com equipamento próprio</p>
+        <p>Sessões de 15 minutos por colaborador, sem precisar trocar de roupa</p>
+        <p>Atendimento no local, com agendamento flexível</p>
+        <p>Avaliação e terapia individualizada para quem apresenta dores musculares</p>
+        <p>Técnicas utilizadas: Massagem terapêutica, liberação miofascial e mobilizações/manipulações articulares</p>
+        <p>Atendimento seguro com abordagens baseadas em evidências científicas.</p>
+      </div>
+      <img src="img6.png" alt="Manipulação cervical" class="imagem-direita">
     </div>
   </section>
 
   <section id="contato" class="contato">
-    <div class="container">
-      <h2>Contato</h2>
-      <p>Agende uma demonstração gratuita</p>
-      <p>Conheça os benefícios da massoterapia no ambiente corporativo.</p>
-      <form action="https://formspree.io/f/xyzjbjaz" method="POST">
-        <input type="hidden" name="_redirect" value="https://fbmassoterapia.com/obrigado.html">
-        <label for="nome">Nome</label>
-        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
-
-        <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." rows="6" required></textarea>
-
-        <button type="submit">Enviar</button>
-      </form>
+    <div class="container contato-flex">
+      <div class="contato-texto">
+        <h2>Contato</h2>
+        <p>Agende uma demonstração gratuita</p>
+        <a href="https://wa.me/5551999465688" class="whatsapp-btn" target="_blank" aria-label="Abrir conversa no WhatsApp">
+          Fale comigo no WhatsApp
+        </a>
+      </div>
+      <img src="img7.jpg" alt="Profissional massoterapeuta" class="foto-contato">
     </div>
   </section>
-
-  <a href="https://wa.me/5551999465688?text=Olá%2C+gostaria+de+saber+mais+sobre+o+atendimento+corporativo." class="whatsapp-btn" target="_blank" aria-label="Abrir conversa no WhatsApp">
-    Fale comigo no WhatsApp
-  </a>
 
   <footer style="background:#004d4d; color:white; text-align:center; padding:0.5rem 0; font-size:0.9rem;">
     © 2025 Felipe Blatt - Massoterapia Corporativa
   </footer>
+
+  <script>
+    function revealOnScroll() {
+      const imagens = document.querySelectorAll('.imagem-direita, .foto-contato');
+      imagens.forEach(img => {
+        const rect = img.getBoundingClientRect();
+        const trigger = window.innerHeight * 0.85;
+        if (rect.top < trigger) {
+          img.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
 </body>
 
 </html>
