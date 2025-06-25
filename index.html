@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Massoterapia corporativa com foco em bem-estar, saúde e produtividade no ambiente de trabalho. Atendimentos personalizados na sua empresa.">
   <title>FB Massoterapia</title>
   <link rel="icon" type="image/png" href="icone.png">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
@@ -68,7 +69,10 @@
     .page-inicial::before {
       content: "";
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       background-color: rgba(0, 0, 0, 0.4);
       z-index: 0;
     }
@@ -104,7 +108,8 @@
       margin-bottom: 1.5rem;
     }
 
-    p, ul {
+    p,
+    ul {
       font-size: 1.2rem;
       margin-bottom: 1rem;
     }
@@ -117,7 +122,8 @@
       border-radius: 10px;
     }
 
-    form input, form textarea {
+    form input,
+    form textarea {
       display: block;
       width: 100%;
       margin-bottom: 1rem;
@@ -154,7 +160,7 @@
       font-weight: bold;
       transition: background 0.3s;
       z-index: 1001;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     .whatsapp-btn:hover {
@@ -165,9 +171,12 @@
       h2 {
         font-size: 2rem;
       }
-      p, ul {
+
+      p,
+      ul {
         font-size: 1rem;
       }
+
       nav a {
         display: inline-block;
         margin: 5px 10px;
@@ -175,13 +184,25 @@
     }
 
     @keyframes fadein {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
 
     @keyframes slidein {
-      from { transform: translateX(-100px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
+      from {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -200,32 +221,33 @@
   <section id="inicio" class="page-inicial">
     <div class="container">
       <h2>Transforme seu ambiente de trabalho</h2>
-<p>Reduza o estresse, aumente a produtividade e cuide de quem faz sua empresa acontecer</p>
-<p>Agende uma experiência transformadora para sua equipe!</p>
+      <p>Reduza o estresse, aumente a produtividade e cuide de quem faz sua empresa acontecer</p>
+      <p>Agende uma experiência transformadora para sua equipe!</p>
     </div>
   </section>
 
   <section id="beneficios" class="beneficios">
     <div class="container">
       <h2>Benefícios</h2>
-      <p><B>🧍‍♂️ Benefícios Físicos:</B>
-<p>Alívio de dores musculares e articulares </p>
-<p>Melhora da circulação sanguínea e linfática </p>
-<p>Redução de tensões e contraturas</p>
-<p>Aumento da flexibilidade e mobilidade</p>
+      <p><strong>🧍‍♂️ Benefícios Físicos:</strong></p>
+      <p>Alívio de dores musculares e articulares</p>
+      <p>Melhora da circulação sanguínea e linfática</p>
+      <p>Redução de tensões e contraturas</p>
+      <p>Aumento da flexibilidade e mobilidade</p>
 
-<p><B>🧠 Benefícios Mentais:</B></p>
-<p>Redução do estresse e da ansiedade</p>
-<p>Melhora da qualidade do sono</p>
-<p>Sensação de acolhimento e cuidado</p>
-<p>Ativação do sistema parassimpático promovendo bem-estar</p>
-<p>Aumento da concentração e clareza mental</p>
+      <p><strong>🧠 Benefícios Mentais:</strong></p>
+      <p>Redução do estresse e da ansiedade</p>
+      <p>Melhora da qualidade do sono</p>
+      <p>Sensação de acolhimento e cuidado</p>
+      <p>Ativação do sistema parassimpático promovendo bem-estar</p>
+      <p>Aumento da concentração e clareza mental</p>
 
-<p><B>💼 Benefícios para empresa:</B></p>
-<p>Redução do absenteísmo por questões de saúde</p>
-<p>Melhora do clima organizacional e consequentemente do foco e produtividade</p>
-<p>Valorização do colaborador, promovendo motivação e satisfação</p>
-<p>Fortalecimento da imagem da empresa como promotora de qualidade de vida.</p>
+      <p><strong>💼 Benefícios para empresa:</strong></p>
+      <p>Redução do absenteísmo por questões de saúde</p>
+      <p>Melhora do clima organizacional e consequentemente do foco e produtividade</p>
+      <p>Valorização do colaborador, promovendo motivação e satisfação</p>
+      <p>Fortalecimento da imagem da empresa como promotora de qualidade de vida.</p>
+    </div>
   </section>
 
   <section id="como-funciona" class="como-funciona">
@@ -237,6 +259,7 @@
       <p>Avaliação e terapia individualizada para quem apresenta dores musculares</p>
       <p>Técnicas utilizadas: Massagem terapêutica, liberação miofascial e mobilizações/manipulações articulares</p>
       <p>Atendimento seguro com abordagens baseadas em evidências científicas.</p>
+    </div>
   </section>
 
   <section id="contato" class="contato">
@@ -244,20 +267,29 @@
       <h2>Contato</h2>
       <p>Agende uma demonstração gratuita</p>
       <p>Conheça os benefícios da massoterapia no ambiente corporativo.</p>
-      <form action="mailto:felipe.quiropraxista@gmail.com" method="POST" enctype="text/plain">
-        <input type="text" name="nome" placeholder="Seu nome" required>
-        <input type="email" name="email" placeholder="Seu e-mail" required>
-        <textarea name="mensagem" placeholder="Escreva sua mensagem..." rows="6"></textarea>
+      <form action="https://formspree.io/f/xyzjbjaz" method="POST">
+        <input type="hidden" name="_redirect" value="https://fbmassoterapia.com/obrigado.html">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." rows="6" required></textarea>
+
         <button type="submit">Enviar</button>
       </form>
     </div>
   </section>
 
-  <a href="https://wa.me/5551999465688" class="whatsapp-btn" target="_blank" aria-label="Abrir conversa no WhatsApp">Fale comigo no WhatsApp</a>
-<footer style="background:#004d4d; color:white; text-align:center; padding:0.5rem 0; font-size:0.9rem;">
-  © 2025 Felipe Blatt - Massoterapia Corporativa
-</footer>
+  <a href="https://wa.me/5551999465688?text=Olá%2C+gostaria+de+saber+mais+sobre+o+atendimento+corporativo." class="whatsapp-btn" target="_blank" aria-label="Abrir conversa no WhatsApp">
+    Fale comigo no WhatsApp
+  </a>
 
+  <footer style="background:#004d4d; color:white; text-align:center; padding:0.5rem 0; font-size:0.9rem;">
+    © 2025 Felipe Blatt - Massoterapia Corporativa
+  </footer>
 </body>
 
 </html>
